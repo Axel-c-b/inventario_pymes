@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ nombre_proyecto }}</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f8;
+            color: #1f2933;
+        }
+        header {
+            background: #0b3d2e;
+            color: #ffffff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0;
+            opacity: 0.85;
+        }
+        main {
+            max-width: 780px;
+            margin: -2rem auto 3rem auto;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+        main h2 {
+            color: #0b3d2e;
+            margin-top: 0;
+        }
+        .actores {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: #e6f4ea;
+            color: #0b3d2e;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        footer {
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.85rem;
+            padding-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ nombre_proyecto }}</h1>
+        <p>Gestión centralizada de inventario para pequeñas y medianas empresas</p>
+    </header>
+    <main>
+        <h2>Bienvenido/a</h2>
+        <p>{{ descripcion }}</p>
+        <p>
+            Este proyecto se encuentra en su etapa inicial: repositorio, ambiente
+            virtual y núcleo Django configurados. El modelo de datos y las
+            funcionalidades de gestión (productos, stock, movimientos) se
+            incorporarán en la siguiente evaluación.
+        </p>
+        <div class="actores">
+            {% for actor in actores %}
+                <span class="badge">{{ actor }}</span>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+        Sistema de Inventario para PYMEs &middot; Proyecto académico
+    </footer>
+</body>
+</html>
