@@ -42,7 +42,7 @@ inventario_pymes/
 
 1. **Clonar el repositorio**
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/Axel-c-b/inventario_pymes
    cd inventario_pymes
    ```
 
